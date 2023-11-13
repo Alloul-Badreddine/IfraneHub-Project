@@ -31,13 +31,13 @@ const Button: React.FC<ButtonProps> = ({
         hover:opacity-80
         transition
         w-full
-        ${outline ? 'bg-white' : 'bg-rose-500'}
-        ${outline ? 'border-black' : 'border-rose-500'}
+        ${outline ? 'bg-white' : 'bg-[#2596be]'}
+        ${outline ? 'border-black' : 'border-[#2596be]'}
         ${outline ? 'text-black' : 'text-white'}
         ${small ? 'text-sm' : 'text-md'}
         ${small ? 'py-1' : 'py-3'}
         ${small ? 'font-light' : 'font-semibold'}
-        ${small ? 'border-[1px]' : 'border-2'}
+        ${small ? 'border-[1px]' : 'border-2'}        
       `}
     >
       {Icon && (
