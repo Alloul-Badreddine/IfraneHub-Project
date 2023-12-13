@@ -1,7 +1,7 @@
 'use client';
 
 import L from 'leaflet';
-import { MapContainer, Marker, TileLayer } from 'react-leaflet'
+import { MapContainer, Marker, TileLayer, Popup } from 'react-leaflet';
 
 import 'leaflet/dist/leaflet.css'
 import markerIcon2x from 'leaflet/dist/images/marker-icon-2x.png';
@@ -25,21 +25,20 @@ const attribution = '&copy; <a href="https://www.openstreetmap.org/copyright">Op
 
 const Map: React.FC<MapProps> = ({ center }) => {
   return (
-      <MapContainer 
-        center={center as L.LatLngExpression || [51, -0.09]} 
-        zoom={center ? 4 : 2} 
-        scrollWheelZoom={false} 
-        className="h-[35vh] rounded-lg"
-      >
-        <TileLayer
-          url={url}
-          attribution={attribution}
-        />
-        {center && (
-          <Marker position={center as L.LatLngExpression} />
-        )}
-      </MapContainer>
-  )
+    <MapContainer
+      center={center as L.LatLngExpression || [51, -0.09]}
+      zoom={center ? 13 : 2} // Adjusted zoom level for Ifrane, Morocco
+      scrollWheelZoom={false}
+      className="h-[35vh] rounded-lg"
+    >
+      <TileLayer url={url} attribution={attribution} />
+      {center && (
+        <Marker position={center as L.LatLngExpression}>
+          <Popup>Ifrane, Morocco</Popup>
+        </Marker>
+      )}
+    </MapContainer>
+  );
 }
 
 export default Map

@@ -166,14 +166,23 @@ const RentModal = () => {
           title="Where is your place located?"
           subtitle="Help guests find you!"
         />
-        <CountrySelect 
-          value={location} 
-          onChange={(value) => setCustomValue('location', value)} 
+        {/* Directly set the location to Ifrane, Morocco */}
+        <CountrySelect
+          value={{
+            flag: '🇲🇦',
+            label: 'Ifrane, Morocco',
+            latlng: [33.533, -5.117],
+            region: 'Africa',
+            value: 'IF', // You can use a unique value for Ifrane, Morocco
+          }}
+          onChange={(value) => setCustomValue('location', value)}
         />
-        <Map center={location?.latlng} />
+        <Map center={[33.533, -5.117]} /> {/* Set the map center to Ifrane, Morocco */}
       </div>
     );
   }
+  
+  
 
   if (step === STEPS.INFO) {
     bodyContent = (
@@ -258,13 +267,14 @@ const RentModal = () => {
         />
         <Input
           id="price"
-          label="Price"
+          label="Price (MAD)"
           formatPrice 
           type="number" 
           disabled={isLoading}
           register={register}
           errors={errors}
           required
+
         />
       </div>
     )

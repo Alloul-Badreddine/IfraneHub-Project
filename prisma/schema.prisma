@@ -75,3 +75,21 @@ model Reservation {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   listing Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
 }
+
+model Review {
+  id String @id @default(auto()) @map("_id") @db.ObjectId // Use String type for MongoDB ObjectId
+  userId String @map("user_id")
+  listingId String @map("listing_id")
+  rating Float
+  comment String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+}
+
+
+
+
+
+
+
+

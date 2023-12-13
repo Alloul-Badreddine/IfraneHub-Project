@@ -13,12 +13,17 @@ const useCountries = () => {
 
   const getByValue = (value: string) => {
     return formattedCountries.find((item) => item.value === value);
-  }
+  };
+
+  const getByLabel = (label: string) => {
+    return formattedCountries.find((item) => item.label === label);
+  };
 
   return {
     getAll,
-    getByValue
-  }
+    getByValue,
+    getByLabel,
+  };
 };
 
 export default useCountries;

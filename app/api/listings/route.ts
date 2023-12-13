@@ -1,11 +1,8 @@
 import { NextResponse } from "next/server";
-
 import prisma from "@/app/libs/prismadb";
 import getCurrentUser from "@/app/actions/getCurrentUser";
 
-export async function POST(
-  request: Request, 
-) {
+export async function POST(request: Request) {
   const currentUser = await getCurrentUser();
 
   if (!currentUser) {
@@ -13,7 +10,8 @@ export async function POST(
   }
 
   const body = await request.json();
-  const { 
+
+  const {
     title,
     description,
     imageSrc,
@@ -23,13 +21,21 @@ export async function POST(
     guestCount,
     location,
     price,
-   } = body;
+  } = body;
 
   Object.keys(body).forEach((value: any) => {
     if (!body[value]) {
       NextResponse.error();
     }
   });
+
+  const defaultLocation = {
+    value: "IF", // Default value for Ifrane, Morocco
+    label: "Ifrane, Morocco",
+    latlng: [33.533, -5.117],
+    region: "Africa",
+    flag: "🇲🇦",
+  };
 
   const listing = await prisma.listing.create({
     data: {
@@ -40,10 +46,10 @@ export async function POST(
       roomCount,
       bathroomCount,
       guestCount,
-      locationValue: location.value,
+      locationValue: location?.value ?? defaultLocation.value,
       price: parseInt(price, 10),
-      userId: currentUser.id
-    }
+      userId: currentUser.id,
+    },
   });
 
   return NextResponse.json(listing);
