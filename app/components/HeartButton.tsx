@@ -49,5 +49,4 @@ const HeartButton: React.FC<HeartButtonProps> = ({
     </div>
    );
 }
- 
 export default HeartButton;

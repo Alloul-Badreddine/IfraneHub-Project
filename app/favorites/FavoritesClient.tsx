@@ -43,5 +43,4 @@ const FavoritesClient: React.FC<FavoritesClientProps> = ({
     </Container>
    );
 }
- 
 export default FavoritesClient;

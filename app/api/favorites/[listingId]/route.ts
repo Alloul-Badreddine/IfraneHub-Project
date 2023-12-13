@@ -65,6 +65,7 @@ export async function DELETE(
     },
     data: {
       favoriteIds
+      
     }
   });
 

@@ -16,6 +16,7 @@ import ListingHead from "@/app/components/listings/ListingHead";
 import ListingInfo from "@/app/components/listings/ListingInfo";
 import ListingReservation from "@/app/components/listings/ListingReservation";
 
+
 const initialDateRange = {
   startDate: new Date(),
   endDate: new Date(),
@@ -142,8 +143,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
               roomCount={listing.roomCount}
               guestCount={listing.guestCount}
               bathroomCount={listing.bathroomCount}
-              locationValue={listing.locationValue}
-            />
+              locationValue={listing.locationValue} listingId={""}            />
             <div 
               className="
                 order-first 

@@ -86,6 +86,7 @@ const Input: React.FC<InputProps> = ({
         {label}
       </label>
     </div>
+    
    );
 }
  

@@ -31,5 +31,4 @@ const ListingPage = async () => {
     </ClientOnly>
   );
 }
- 
 export default ListingPage;

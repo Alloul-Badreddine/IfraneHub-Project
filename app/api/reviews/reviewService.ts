@@ -28,6 +28,7 @@ export const getReviewsForListing = async (listingId: string) => {
   });
 
   return reviews;
+  
 };
 
 export const closePrismaConnection = () => {

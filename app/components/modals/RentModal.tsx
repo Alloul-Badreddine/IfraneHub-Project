@@ -295,4 +295,6 @@ const RentModal = () => {
   );
 }
 
+
+
 export default RentModal;

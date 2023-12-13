@@ -143,5 +143,4 @@ const UserMenu: React.FC<UserMenuProps> = ({
     </div>
    );
 }
- 
 export default UserMenu;

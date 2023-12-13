@@ -26,6 +26,7 @@ const ListingPage = async ({ params }: { params: IParams }) => {
     );
   }
 
+  
   return (
     <ClientOnly>
       <ListingClient

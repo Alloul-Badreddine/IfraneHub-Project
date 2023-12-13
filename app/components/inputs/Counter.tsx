@@ -89,4 +89,5 @@ const Counter: React.FC<CounterProps> = ({
    );
 }
  
+
 export default Counter;

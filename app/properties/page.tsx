@@ -29,6 +29,7 @@ const PropertiesPage = async () => {
       </ClientOnly>
     );
   }
+  
 
   return (
     <ClientOnly>

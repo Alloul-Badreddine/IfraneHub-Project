@@ -25,5 +25,4 @@ const useCountries = () => {
     getByLabel,
   };
 };
-
 export default useCountries;

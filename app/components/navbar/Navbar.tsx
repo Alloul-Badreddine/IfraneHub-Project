@@ -40,6 +40,4 @@ const Navbar: React.FC<NavbarProps> = ({
   </div>
   );
 }
-
-
 export default Navbar;

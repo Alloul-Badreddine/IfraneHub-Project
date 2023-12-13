@@ -8,6 +8,7 @@ export default async function getFavoriteListings() {
 
     if (!currentUser) {
       return [];
+      
     }
 
     const favorites = await prisma.listing.findMany({

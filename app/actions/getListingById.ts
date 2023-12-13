@@ -16,6 +16,7 @@ export default async function getListingById(
       },
       include: {
         user: true
+
       }
     });
 
@@ -36,5 +37,6 @@ export default async function getListingById(
     };
   } catch (error: any) {
     throw new Error(error);
+    
   }
 }

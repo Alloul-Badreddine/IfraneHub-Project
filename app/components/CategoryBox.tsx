@@ -68,5 +68,4 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     </div>
    );
 }
- 
 export default CategoryBox;

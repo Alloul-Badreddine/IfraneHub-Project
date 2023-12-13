@@ -11,7 +11,7 @@ const ModalsProvider = () => {
       <LoginModal />
       <RegisterModal />
       <SearchModal />
-      <RentModal />
+      <RentModal /> 
     </>
    );
 }

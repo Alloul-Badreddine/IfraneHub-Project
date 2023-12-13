@@ -22,5 +22,4 @@ const Heading: React.FC<HeadingProps> = ({
     </div>
    );
 }
- 
 export default Heading;
